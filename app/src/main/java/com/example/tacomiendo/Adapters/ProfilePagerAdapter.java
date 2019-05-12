@@ -4,15 +4,15 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.example.tacomiendo.Fragments.FirstFragment;
-import com.example.tacomiendo.Fragments.SecondFragment;
-import com.example.tacomiendo.Fragments.ThirdFragment;
+import com.example.tacomiendo.Fragments.AddressFragment;
+import com.example.tacomiendo.Fragments.CreditCardsFragment;
+import com.example.tacomiendo.Fragments.ProfileFragment;
 
-public class PagerAdapter extends FragmentStatePagerAdapter {
+public class ProfilePagerAdapter extends FragmentStatePagerAdapter {
 
     private int numberOfTabs;
 
-    public PagerAdapter(FragmentManager fm, int numberOfTabs){
+    public ProfilePagerAdapter(FragmentManager fm, int numberOfTabs){
         super(fm);
         this.numberOfTabs = numberOfTabs;
     }
@@ -21,11 +21,11 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new FirstFragment();
+                return new ProfileFragment();
             case 1:
-                return new SecondFragment();
+                return new AddressFragment();
             case 2:
-                return new ThirdFragment();
+                return new CreditCardsFragment();
             default:
                 return null;
         }

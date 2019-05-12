@@ -2,19 +2,14 @@ package com.example.tacomiendo.Activities;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import com.example.tacomiendo.Adapters.PagerAdapter;
 import com.example.tacomiendo.Fragments.AccountFragment;
 import com.example.tacomiendo.Fragments.CategoryFragment;
 import com.example.tacomiendo.Fragments.HomeFragment;
@@ -23,6 +18,7 @@ import com.example.tacomiendo.R;
 
 public class MainActivity extends AppCompatActivity {
 
+    //objects for a drawer
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
 
@@ -34,11 +30,13 @@ public class MainActivity extends AppCompatActivity {
         //setting the toolbar
         setToolbar();
 
+        //setting the ui
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.navview);
-
+        //setup a fragment by default
         setFragmentByDefault();
 
+        //event fot item selected at navigation drawer
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -68,40 +66,9 @@ public class MainActivity extends AppCompatActivity {
                     changeFragment(fragment, item);
                     drawerLayout.closeDrawers();
                 }
-
                 return true;
             }
         });
-
-        /*TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
-        tabLayout.addTab(tabLayout.newTab().setText("Tab 1"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab 2"));
-        tabLayout.addTab(tabLayout.newTab().setText("Tab 3"));
-        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-
-        final ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
-        PagerAdapter adapter = new PagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
-
-        viewPager.setAdapter(adapter);
-        viewPager.addOnPageChangeListener( new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-
-        tabLayout.addOnTabSelectedListener(new TabLayout.BaseOnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                int position = tab.getPosition();
-                viewPager.setCurrentItem(position);
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });*/
     }
 
     //setting up the toolbar
@@ -112,10 +79,12 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    //method that set homeFragmentByDefault
     public void setFragmentByDefault(){
         changeFragment(new HomeFragment(), navigationView.getMenu().getItem(0));
     }
 
+    //method that allow us to chanche a fragment
     public void changeFragment(Fragment fragment, MenuItem item){
         getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, fragment).commit();
         item.setChecked(true);

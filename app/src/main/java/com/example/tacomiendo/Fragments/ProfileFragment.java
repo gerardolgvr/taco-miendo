@@ -9,11 +9,14 @@ import android.view.ViewGroup;
 
 import com.example.tacomiendo.R;
 
-public class SecondFragment extends Fragment {
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class ProfileFragment extends Fragment {
 
 
-    public SecondFragment() {
-
+    public ProfileFragment() {
+        // Required empty public constructor
     }
 
 
@@ -21,8 +24,7 @@ public class SecondFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_second, container, false);
-        return view;
+        return inflater.inflate(R.layout.fragment_profile, container, false);
     }
 
 }

@@ -9,20 +9,22 @@ import android.view.ViewGroup;
 
 import com.example.tacomiendo.R;
 
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class AddressFragment extends Fragment {
 
-public class ThirdFragment extends Fragment {
 
-    public ThirdFragment() {
-
+    public AddressFragment() {
+        // Required empty public constructor
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_third, container, false);
-
-        return view;
+        return inflater.inflate(R.layout.fragment_address, container, false);
     }
 
 }
