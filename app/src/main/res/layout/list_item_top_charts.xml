@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_top_chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cafe"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#111"
+            android:alpha="0.5"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"></LinearLayout>
+
+        <TextView
+            android:id="@+id/pricing_top_charts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="$ 99 MXN"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="23dp"
+            android:padding="10dp"
+            />
+        <TextView
+            android:id="@+id/item_name_top_charts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="Nombre"
+            android:textStyle="bold"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="3dp"
+            android:padding="10dp"
+            />
+    </FrameLayout>
+
+</LinearLayout>
