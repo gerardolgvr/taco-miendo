@@ -32,7 +32,7 @@ public class AccountFragment extends Fragment {
         tabLayout.addTab(tabLayout.newTab().setText("Tarjetas"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-        final ViewPager viewPager = (ViewPager) view.findViewById(R.id.viewPager);
+        final ViewPager viewPager = (ViewPager) view.findViewById(R.id.account_viewPager);
         ProfilePagerAdapter adapter = new ProfilePagerAdapter(getFragmentManager(), tabLayout.getTabCount());
 
         viewPager.setAdapter(adapter);
