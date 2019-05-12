@@ -1,6 +1,9 @@
 package com.example.tacomiendo.Activities;
 
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -12,11 +15,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.tacomiendo.Adapters.PagerAdapter;
+import com.example.tacomiendo.Fragments.AccountFragment;
+import com.example.tacomiendo.Fragments.CategoryFragment;
+import com.example.tacomiendo.Fragments.HomeFragment;
+import com.example.tacomiendo.Fragments.SettingsFragment;
 import com.example.tacomiendo.R;
 
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
+    private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +35,45 @@ public class MainActivity extends AppCompatActivity {
         setToolbar();
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        navigationView = (NavigationView) findViewById(R.id.navview);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        setFragmentByDefault();
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                boolean fragmentTransaction = false;
+                Fragment fragment = null;
+
+                switch(item.getItemId()){
+                    case R.id.menu_start:
+                        fragment = new HomeFragment();
+                        fragmentTransaction = true;
+                        break;
+                    case R.id.menu_account:
+                        fragment = new AccountFragment();
+                        fragmentTransaction = true;
+                        break;
+                    case R.id.menu_category:
+                        fragment = new CategoryFragment();
+                        fragmentTransaction = true;
+                        break;
+                    case R.id.menu_settings:
+                        fragment = new SettingsFragment();
+                        fragmentTransaction = true;
+                        break;
+                }
+
+                if(fragmentTransaction){
+                    changeFragment(fragment, item);
+                    drawerLayout.closeDrawers();
+                }
+
+                return true;
+            }
+        });
+
+        /*TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
         tabLayout.addTab(tabLayout.newTab().setText("Tab 1"));
         tabLayout.addTab(tabLayout.newTab().setText("Tab 2"));
         tabLayout.addTab(tabLayout.newTab().setText("Tab 3"));
@@ -56,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {
 
             }
-        });
+        });*/
     }
 
     //setting up the toolbar
@@ -65,6 +110,16 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(myToolbar);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    public void setFragmentByDefault(){
+        changeFragment(new HomeFragment(), navigationView.getMenu().getItem(0));
+    }
+
+    public void changeFragment(Fragment fragment, MenuItem item){
+        getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, fragment).commit();
+        item.setChecked(true);
+        getSupportActionBar().setTitle(item.getTitle());
     }
 
     @Override
