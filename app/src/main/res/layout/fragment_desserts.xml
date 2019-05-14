@@ -1,16 +1,379 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".Fragments.DessertsFragment">
+    tools:context=".Fragments.DessertsFragment"
+    android:layout_below="@id/category_tabLayout">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.GridLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:grid="http://schemas.android.com/apk/res-auto"
+
+            android:id="@+id/choice_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="4dp"
+
+            grid:alignmentMode="alignBounds"
+            grid:columnCount="2"
+            grid:rowOrderPreserved="false"
+            grid:useDefaultMargins="true">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                grid:layout_columnWeight="1"
+                grid:layout_gravity="fill_horizontal"
+                android:gravity="center"
+                android:background="#FF33B5E5"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/coctel"
+                    android:scaleType="centerCrop"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="#111"
+                    android:alpha="0.5"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/pricing_top_charts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="$ 49 MXN"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="23dp"
+                    android:padding="10dp"
+                    />
+                <TextView
+                    android:id="@+id/item_name_top_charts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="Cóctel"
+                    android:textStyle="bold"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="3dp"
+                    android:padding="10dp"
+                    />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                grid:layout_columnWeight="1"
+                grid:layout_gravity="fill_horizontal"
+                android:gravity="center"
+                android:background="#FF33B5E5"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/coctel_jordano"
+                    android:scaleType="centerCrop"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="#111"
+                    android:alpha="0.5"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="$ 59 MXN"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="23dp"
+                    android:padding="10dp"
+                    />
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="Cóctel Jordano"
+                    android:textStyle="bold"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="3dp"
+                    android:padding="10dp"
+                    />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                grid:layout_columnWeight="1"
+                grid:layout_gravity="fill_horizontal"
+                android:gravity="center"
+                android:background="#FF33B5E5"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/cupcakes_festival"
+                    android:scaleType="centerCrop"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="#111"
+                    android:alpha="0.5"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="$ 69 MXN"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="23dp"
+                    android:padding="10dp"
+                    />
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="Cup Cakes Festival"
+                    android:textStyle="bold"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="3dp"
+                    android:padding="10dp"
+                    />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                grid:layout_columnWeight="1"
+                grid:layout_gravity="fill_horizontal"
+                android:gravity="center"
+                android:background="#FF33B5E5"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/flan_celestial"
+                    android:scaleType="centerCrop"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="#111"
+                    android:alpha="0.5"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="$ 39 MXN"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="23dp"
+                    android:padding="10dp"
+                    />
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="Flan Celestial"
+                    android:textStyle="bold"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="3dp"
+                    android:padding="10dp"
+                    />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                grid:layout_columnWeight="1"
+                grid:layout_gravity="fill_horizontal"
+                android:gravity="center"
+                android:background="#FF33B5E5"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/muffin_amoroso"
+                    android:scaleType="centerCrop"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="#111"
+                    android:alpha="0.5"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="$ 49 MXN"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="23dp"
+                    android:padding="10dp"
+                    />
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="Muffin Amoroso"
+                    android:textStyle="bold"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="3dp"
+                    android:padding="10dp"
+                    />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                grid:layout_columnWeight="1"
+                grid:layout_gravity="fill_horizontal"
+                android:gravity="center"
+                android:background="#FF33B5E5"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/pastel_fresa"
+                    android:scaleType="centerCrop"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="#111"
+                    android:alpha="0.5"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="$ 49 MXN"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="23dp"
+                    android:padding="10dp"
+                    />
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="Pastel de Fresa"
+                    android:textStyle="bold"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="3dp"
+                    android:padding="10dp"
+                    />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                grid:layout_columnWeight="1"
+                grid:layout_gravity="fill_horizontal"
+                android:gravity="center"
+                android:background="#FF33B5E5"
+                >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/postre_vainilla"
+                    android:scaleType="centerCrop"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="#111"
+                    android:alpha="0.5"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="$ 49 MXN"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="23dp"
+                    android:padding="10dp"
+                    />
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:text="Postre Vainilla"
+                    android:textStyle="bold"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="3dp"
+                    android:padding="10dp"
+                    />
+
+            </FrameLayout>
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:text="Desserts Fragment" />
+        </android.support.v7.widget.GridLayout>
+    </ScrollView>
 
-</FrameLayout>
+
+
+
+</LinearLayout>

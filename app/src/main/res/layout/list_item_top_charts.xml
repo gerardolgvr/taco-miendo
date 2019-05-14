@@ -21,7 +21,9 @@
             android:background="#111"
             android:alpha="0.5"
             android:layout_gravity="bottom"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical">
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/pricing_top_charts"

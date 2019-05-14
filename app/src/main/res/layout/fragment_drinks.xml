@@ -1,16 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.DrinksFragment">
+    android:orientation="vertical"
+    tools:context=".Fragments.DrinksFragment"
+    android:layout_below="@id/category_tabLayout">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.GridLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:grid="http://schemas.android.com/apk/res-auto"
+
+            android:id="@+id/choice_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="4dp"
+
+            grid:alignmentMode="alignBounds"
+            grid:columnCount="2"
+            grid:rowOrderPreserved="false"
+            grid:useDefaultMargins="true">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    grid:layout_columnWeight="1"
+                    grid:layout_gravity="fill_horizontal"
+                    android:gravity="center"
+                    android:background="#FF33B5E5"
+                    >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/cafe"
+                        android:scaleType="centerCrop"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="#111"
+                        android:alpha="0.5"
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/pricing_top_charts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:text="$ 39 MXN"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="23dp"
+                        android:padding="10dp"
+                        />
+                    <TextView
+                        android:id="@+id/item_name_top_charts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:text="Cafe Americano"
+                        android:textStyle="bold"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="3dp"
+                        android:padding="10dp"
+                        />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    grid:layout_columnWeight="1"
+                    grid:layout_gravity="fill_horizontal"
+                    android:gravity="center"
+                    android:background="#FF33B5E5"
+                    >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/jugo_natural"
+                        android:scaleType="centerCrop"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="#111"
+                        android:alpha="0.5"
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:text="$ 50 MXN"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="23dp"
+                        android:padding="10dp"
+                        />
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:text="Jugo Natural"
+                        android:textStyle="bold"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="3dp"
+                        android:padding="10dp"
+                        />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    grid:layout_columnWeight="1"
+                    grid:layout_gravity="fill_horizontal"
+                    android:gravity="center"
+                    android:background="#FF33B5E5"
+                    >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/vino_tinto"
+                        android:scaleType="centerCrop"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="#111"
+                        android:alpha="0.5"
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:text="$ 69 MXN"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="23dp"
+                        android:padding="10dp"
+                        />
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#fff"
+                        android:text="Vino Tinto"
+                        android:textStyle="bold"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="3dp"
+                        android:padding="10dp"
+                        />
+
+                </FrameLayout>
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:text="Drinks Fragment" />
-
-</FrameLayout>
+        </android.support.v7.widget.GridLayout>
+    </ScrollView>
+</LinearLayout>

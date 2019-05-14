@@ -20,5 +20,5 @@
         android:id="@+id/category_viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/account_tabLayout" />
+        android:layout_below="@id/category_tabLayout" />
 </RelativeLayout>
