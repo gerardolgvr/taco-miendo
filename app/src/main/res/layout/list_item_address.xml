@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="120dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".3"
+            android:paddingLeft="30dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+            <TextView
+                android:id="@+id/item_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dirección"/>
+            <TextView
+                android:id="@+id/item_neighborhood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Colonia"/>
+            <TextView
+                android:id="@+id/item_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ciudad"/>
+            <TextView
+                android:id="@+id/item_telephone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Teléfono"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".7">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_forward"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

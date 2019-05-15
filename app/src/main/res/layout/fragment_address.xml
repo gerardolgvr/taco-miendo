@@ -5,12 +5,10 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.AddressFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Addresses fragment"
-        android:textAppearance="?android:attr/textAppearanceLarge"/>
+    <ListView
+        android:id="@+id/list_addresses"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 
 </FrameLayout>

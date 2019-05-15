@@ -5,11 +5,18 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.CreditCardsFragment">
 
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/tarjeta_credito"
+        android:layout_gravity="center"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Cards Fragment"
+        android:layout_marginTop="80dp"
+        android:text="No tienes ninguna tarjeta registrada"
         android:textAppearance="?android:attr/textAppearanceLarge"/>
 
 

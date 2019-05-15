@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="top_charts">Lo más pedido</string>
+    <string name="user_info">Información de usuario</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="change_password">Cambiar contraseña</string>
+
 </resources>
