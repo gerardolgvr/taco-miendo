@@ -16,6 +16,7 @@
         android:textStyle="bold"
         android:text="@string/notifications"/>
     <TextView
+        android:id="@+id/edit_set_frequency"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:layout_width="match_parent"
@@ -23,6 +24,7 @@
         android:text="Frecuencia de notificaciones por correo"/>
 
     <TextView
+        android:id="@+id/edit_frequency"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:padding="10dp"
