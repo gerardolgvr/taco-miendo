@@ -7,5 +7,6 @@
     <string name="user_info">Información de usuario</string>
     <string name="contrasena">Contraseña</string>
     <string name="change_password">Cambiar contraseña</string>
+    <string name="notifications">Notificaciones</string>
 
 </resources>
